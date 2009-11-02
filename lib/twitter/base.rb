@@ -1,3 +1,5 @@
+require 'open-uri'
+
 module Twitter
   class Base
     extend Forwardable
@@ -110,8 +112,8 @@ module Twitter
       perform_post('/account/update_profile_colors.json', :body => colors)
     end
 
-    def update_profile_background_image(file)
-      file  = File.open(file) unless file.is_a?(File)
+    def update_profile_background_image(path_or_url_to_image)
+      file  = open(path_or_url_to_image) 
       url   = URI.parse('http://twitter.com/account/update_profile_background_image.json')
       Net::HTTP.new(url.host, url.port).start do |http| 
         req = Net::HTTP::Post.new(url.request_uri)

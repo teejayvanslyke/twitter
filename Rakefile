@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name              = "twitter"
-    gem.summary           = %Q{wrapper for the twitter api (oauth only)}
-    gem.email             = "nunemaker@gmail.com"
-    gem.homepage          = "http://github.com/jnunemaker/twitter"
-    gem.authors           = ["John Nunemaker"]
+    gem.name              = "teejayvanslyke-twitter"
+    gem.summary           = %Q{wrapper for the twitter api (oauth only), with some modifications}
+    gem.email             = "teejay.vanslyke@gmail.com"
+    gem.homepage          = "http://github.com/teejayvanslyke/twitter"
+    gem.authors           = ["John Nunemaker", "T.J. VanSlyke"]
     gem.rubyforge_project = "twitter"
     gem.files             = FileList["[A-Z]*", "{examples,lib,test}/**/*"]
     
