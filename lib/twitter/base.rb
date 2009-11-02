@@ -175,6 +175,7 @@ module Twitter
       Twitter::Request.post(self, path, options)
     end
 
+    CRLF                   = "\r\n"
     # Encodes the request as multipart
     def add_multipart_data(req,params)
       boundary = Time.now.to_i.to_s(16)
